@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Merch & Rescue — Premium on-demand merch</title>
+    <meta name="description" content="DTF, patches, screen, and kitted Get Pressed™ packs. Fast proofs, faster production." />
+    <style>
+      :root { color-scheme: dark; --bg:#0b1110; --fg:#fff; --sub:rgba(255,255,255,.7); --line:rgba(255,255,255,.1); --accent:#34d399; }
+      *{box-sizing:border-box}
+      html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif}
+      a{color:inherit;text-decoration:none}
+      img{max-width:100%;height:auto;display:block}
+      .container{max-width:1120px;margin:0 auto;padding:0 20px}
+      header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(11,17,16,.7);backdrop-filter:saturate(160%) blur(8px)}
+      .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+      .brand{display:flex;align-items:center;gap:.75rem;font-weight:900;letter-spacing:.18em}
+      .chip{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:rgba(52,211,153,.15);border:1px solid var(--line)}
+      nav .links{display:flex;gap:1rem;color:var(--sub)}
+      @media (max-width:860px){nav .links{display:none}}
+      .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-weight:600}
+      .btn.primary{background:var(--accent);color:#0b1110;border-color:transparent}
+      .btn.small{font-size:.9rem;padding:.6rem .9rem}
+      .section{padding:4rem 0}
+      .section.alt{background:rgba(255,255,255,.02);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+      .grid{display:grid;gap:1.25rem}
+      .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+      @media (max-width:860px){.cols-3,.cols-2{grid-template-columns:1fr}}
+      .card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:16px;padding:1rem}
+      .kicker{text-transform:uppercase;letter-spacing:.2em;color:#bbf7d0;font-size:.7rem;font-weight:700;opacity:.8;margin-bottom:.5rem;text-align:center}
+      .h1{font-size:2.4rem;margin:.5rem 0 0;font-weight:900;line-height:1.15}
+      .h2{font-size:2rem;font-weight:900;text-align:center;margin:0 0 .75rem}
+      .sub{color:var(--sub);text-align:center;margin:.5rem auto 2rem;max-width:48rem}
+      .small{font-size:.9rem;color:var(--sub)}
+      .badge{display:flex;gap:.5rem;align-items:center;color:rgba(255,255,255,.6);font-size:.85rem;margin-top:.75rem}
+      .hero{position:relative;overflow:hidden}
+      .hero .blob{position:absolute;border-radius:9999px;filter:blur(30px);opacity:.2}
+      .blob.one{left:-120px;top:-120px;width:18rem;height:18rem;background:var(--accent)}
+      .blob.two{right:-120px;bottom:-120px;width:18rem;height:18rem;background:#10b981}
+      .gallery-tile{aspect-ratio:4/3;background:linear-gradient(135deg,#052e2b,#0f1816);border:1px solid var(--line);border-radius:16px;overflow:hidden;position:relative}
+      .gallery-tile .overlay{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0);opacity:0;transition:.2s}
+      .gallery-tile:hover .overlay{background:rgba(0,0,0,.3);opacity:1}
+      input.input,textarea.input{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--fg);padding:.625rem .75rem;border-radius:12px;outline:none}
+      input.input:focus,textarea.input:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(52,211,153,.35)}
+      footer{border-top:1px solid var(--line);padding:2rem 0;color:rgba(255,255,255,.7);font-size:.95rem}
+      #thanks-toast{display:none} #thanks:target ~ #thanks-toast{display:block}
+      .toast{position:fixed;inset:auto 16px 16px 16px;margin:0 auto;max-width:640px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:1rem 1.25rem;z-index:50;backdrop-filter:blur(6px)}
+    </style>
+  </head>
+  <body>
+    <span id="thanks"></span>
+    <div id="thanks-toast" class="toast">
+      <strong>We got your request ✅</strong>
+      <div class="small">We’ll reach out same‑day with options and pricing. If it’s urgent, call 480‑309‑1335.</div>
+    </div>
+
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="chip" aria-hidden="true">🛡️</div>
+          <span>MERCH &amp; RESCUE</span>
+        </div>
+        <nav><div class="links">
+          <a href="#solutions">Solutions</a>
+          <a href="#kits">Kits</a>
+          <a href="#process">Process</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div></nav>
+        <a class="btn primary" href="#quote" aria-label="Jump to quote form">Get a Quote →</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" aria-labelledby="hero-heading">
+        <div class="blob one" aria-hidden="true"></div>
+        <div class="blob two" aria-hidden="true"></div>
+        <div class="container">
+          <p class="kicker">Built for the mission</p>
+          <h1 id="hero-heading" class="h1">
+            Premium on‑demand merch
+            <span style="display:block;color:var(--accent)">with boots‑on‑the‑ground grit.</span>
+          </h1>
+          <p class="sub">We design, print, and ship military‑inspired apparel and custom kits at speed. From unit morale drops to national campaigns, we keep quality high and logistics tight.</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <a class="btn primary" href="#quote">Start a Project</a>
+            <a class="btn" href="#kits">Shop Get Pressed Packs</a>
+          </div>
+          <div class="badge" aria-hidden="true">⭐ <span>Unit‑grade quality • Fast turnarounds • Transparent pricing</span></div>
+        </div>
+      </section>
+
+      <section id="solutions" class="section" aria-labelledby="solutions-heading">
+        <div class="container">
+          <div class="kicker">Capabilities</div>
+          <h2 id="solutions-heading" class="h2">Solutions that scale</h2>
+          <p class="sub">Choose the path that matches your mission profile.</p>
+          <div class="grid cols-3">
+            <div class="card"><h3>On‑Demand Print Ops</h3><p class="small">DTF, screen print, embroidery, laser patches, BOPP labels — precision gear for tight timelines.</p></div>
+            <div class="card"><h3>Unit‑Grade Quality</h3><p class="small">MIL‑inspired durability and QC — so your merch survives the field, not just the photo.</p></div>
+            <div class="card"><h3>Rapid Turnaround</h3><p class="small">Fast proofs, faster production. Rush programs available when the clock is ticking.</p></div>
+          </div>
+          <div style="text-align:center;margin-top:1rem"><a class="btn primary" href="#quote">Get a custom quote →</a></div>
+        </div>
+      </section>
+
+      <section id="kits" class="section alt" aria-labelledby="kits-heading">
+        <div class="container">
+          <div class="kicker">DIY Packs</div>
+          <h2 id="kits-heading" class="h2">Get Pressed™ Kits</h2>
+          <p class="sub">Party‑in‑a‑box kits: pick your theme, press at home, look squared away.</p>
+          <div class="grid cols-3">
+            <div class="card">
+              <div class="gallery-tile"></div>
+              <h3 style="margin:.75rem 0 0">Birthday Raid</h3>
+              <p class="small">Includes themed transfers, blanks, and instructions. Refill packs available.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
+                <span class="small">Starting at $59</span><a class="btn small" href="#quote">Request</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="gallery-tile"></div>
+              <h3 style="margin:.75rem 0 0">Bachelorette Op</h3>
+              <p class="small">Includes themed transfers, blanks, and instructions. Refill packs available.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
+                <span class="small">Starting at $59</span><a class="btn small" href="#quote">Request</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="gallery-tile"></div>
+              <h3 style="margin:.75rem 0 0">Patriot Set</h3>
+              <p class="small">Includes themed transfers, blanks, and instructions. Refill packs available.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
+                <span class="small">Starting at $59</span><a class="btn small" href="#quote">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section" aria-labelledby="process-heading">
+        <div class="container">
+          <div class="kicker">How it works</div>
+          <h2 id="process-heading" class="h2">Simple, operator‑proof workflow</h2>
+          <div class="grid cols-3">
+            <div class="card"><strong>1) Brief &amp; Upload</strong><p class="small">Tell us what you need and drop your art. No art? We’ll design it.</p></div>
+            <div class="card"><strong>2) Approve Proof</strong><p class="small">We send a clean proof + quote. You confirm. We spin up the presses.</p></div>
+            <div class="card"><strong>3) Print &amp; Ship</strong><p class="small">Tracked, insured shipping nationwide. Need kitting? We’ll assemble it.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section alt" aria-labelledby="gallery-heading">
+        <div class="container">
+          <div class="kicker">Work</div>
+          <h2 id="gallery-heading" class="h2">Recent deployments</h2>
+          <p class="sub">A lightweight sampling — more on request.</p>
+          <div class="grid cols-3">
+            <div class="gallery-tile"><div class="overlay"><span class="btn">View</span></div></div>
+            <div class="gallery-tile"><div class="overlay"><span class="btn">View</span></div></div>
+            <div class="gallery-tile"><div class="overlay"><span class="btn">View</span></div></div>
+            <div class="gallery-tile"><div class="overlay"><span class="btn">View</span></div></div>
+            <div class="gallery-tile"><div class="overlay"><span class="btn">View</span></div></div>
+            <div class="gallery-tile"><div class="overlay"><span class="btn">View</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="section" aria-labelledby="quote-heading">
+        <div class="container">
+          <div class="kicker">Get started</div>
+          <h2 id="quote-heading" class="h2">Request a quote</h2>
+          <p class="sub">Give us the basics — we’ll reply same‑day with options and pricing.</p>
+          <form action="https://formsubmit.co/hello@merchandrescue.com" method="POST" class="grid cols-2" style="gap:1rem">
+            <input type="hidden" name="_next" value="https://merchandrescue.com/#thanks" />
+            <input type="hidden" name="_subject" value="New quote request — Merch & Rescue" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div><label class="small" for="name">Name</label><input class="input" id="name" name="name" required placeholder="Your name" /></div>
+            <div><label class="small" for="email">Email</label><input class="input" id="email" name="email" type="email" required placeholder="you@company.com" /></div>
+            <div style="grid-column:1/-1"><label class="small" for="details">Project details</label><textarea class="input" id="details" name="details" rows="5" placeholder="What are we making? Quantities, sizes, due date, shipping address…"></textarea></div>
+            <div style="grid-column:1/-1;display:flex;justify-content:space-between;align-items:center"><div class="small">No spam. We reply same‑day.</div><button class="btn primary" type="submit">Send request</button></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt" aria-labelledby="contact-heading">
+        <div class="container" style="display:grid;gap:1rem;grid-template-columns:1fr 1fr;align-items:center">
+          <div><h3 id="contact-heading" style="font-size:1.4rem;margin:0">Questions or rush job?</h3><p class="small">We can spin up quickly. If you have artwork ready, mention it in your message.</p></div>
+          <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem">
+            <a class="btn" href="tel:14803091335">📞 480‑309‑1335</a>
+            <a class="btn" href="mailto:hello@merchandrescue.com">✉️ Email</a>
+            <div class="btn" style="pointer-events:none">📍 Mesa, AZ</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container" style="display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap">
+        <div class="brand"><div class="chip" aria-hidden="true">🛡️</div><span style="letter-spacing:.12em">MERCH &amp; RESCUE</span></div>
+        <div class="small"><a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Terms</a> &nbsp;|&nbsp; <a href="#">Accessibility</a></div>
+        <div class="small">© <span id="year"></span> Merch &amp; Rescue</div>
+      </div>
+    </footer>
+
+    <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  </body>
+</html>

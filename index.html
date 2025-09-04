@@ -46,6 +46,9 @@
       footer{border-top:1px solid var(--line);padding:2rem 0;color:rgba(255,255,255,.7);font-size:.95rem}
       #thanks-toast{display:none} #thanks:target ~ #thanks-toast{display:block}
       .toast{position:fixed;inset:auto 16px 16px 16px;margin:0 auto;max-width:640px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:1rem 1.25rem;z-index:50;backdrop-filter:blur(6px)}
+    .logo { height: 28px; width: auto; border-radius: 6px; }
+@media (min-width: 861px) { .logo { height: 32px; } }
+
     </style>
   </head>
   <body>
@@ -57,8 +60,12 @@
 
     <header>
       <div class="container nav">
-        <div class="brand">
-          <div class="chip" aria-hidden="true">🛡️</div>
+         <div class="brand">
+  <a href="/" style="display:flex;align-items:center;gap:.75rem">
+    <img class="logo" src="assets/logo.png" alt="Merch &amp; Rescue logo" />
+    <span>MERCH &amp; RESCUE</span>
+  </a>
+</div>
           <span>MERCH &amp; RESCUE</span>
         </div>
         <nav><div class="links">

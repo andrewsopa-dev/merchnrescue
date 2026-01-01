@@ -1850,3 +1850,290 @@ select.input:focus {
     max-width: 95vw;
   }
 }
+
+/* =====================================================
+   CONTACT PAGE - FILE UPLOAD & TOAST
+   ===================================================== */
+
+/* Required/Optional labels */
+.required {
+  color: var(--accent-light);
+}
+
+.optional {
+  color: var(--sub);
+  font-weight: 400;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+  position: relative;
+}
+
+.file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.file-upload-label svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--sub);
+  transition: stroke 0.2s ease;
+}
+
+.file-upload-label span {
+  color: var(--sub);
+}
+
+.file-upload-label .small {
+  color: var(--sub);
+  opacity: 0.7;
+}
+
+.file-upload-wrapper:hover .file-upload-label,
+.file-upload-wrapper.drag-over .file-upload-label {
+  border-color: var(--accent);
+  background: rgba(26, 127, 127, 0.05);
+}
+
+.file-upload-wrapper:hover .file-upload-label svg,
+.file-upload-wrapper.drag-over .file-upload-label svg {
+  stroke: var(--accent-light);
+}
+
+/* File List */
+.file-list {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.file-item svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--accent-light);
+  flex-shrink: 0;
+}
+
+.file-name {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  font-size: 0.75rem;
+  color: var(--sub);
+  flex-shrink: 0;
+}
+
+.file-remove {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.file-remove:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.file-remove svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--sub);
+}
+
+.file-remove:hover svg {
+  stroke: var(--fg);
+}
+
+/* Urgent Note */
+.urgent-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--sub);
+}
+
+.urgent-note svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--coyote);
+  flex-shrink: 0;
+}
+
+.urgent-note a {
+  color: var(--coyote-light);
+  font-weight: 600;
+}
+
+.urgent-note a:hover {
+  color: var(--fg);
+}
+
+/* Submit Button Loading State */
+#submit-btn {
+  min-width: 140px;
+}
+
+.btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.toast-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  max-width: 320px;
+}
+
+.toast-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.toast-content strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--fg);
+}
+
+.toast-content .small {
+  color: var(--sub);
+}
+
+@media (max-width: 600px) {
+  .toast {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .toast-content {
+    max-width: none;
+  }
+}
+
+/* Thanks Banner (shown after Netlify form submission) */
+.thanks-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--accent);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.thanks-banner.show {
+  transform: translateY(0);
+}
+
+.thanks-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  color: var(--fg);
+}
+
+.thanks-content svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.thanks-content strong {
+  margin-right: 0.5rem;
+}
+
+/* File note */
+.file-note {
+  margin-top: 0.5rem;
+  color: var(--sub);
+  font-style: italic;
+}

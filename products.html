@@ -6,7 +6,6 @@
     <title>Products — Merch & Rescue</title>
     <meta name="description" content="Browse our curated product categories. Apparel, headwear, drinkware, and more — all ready for your custom branding." />
     <link rel="stylesheet" href="styles.css" />
-    <script src="products-data.js" defer></script>
   </head>
   <body>
     <header>
@@ -64,9 +63,9 @@
             <div class="filter-count" id="filter-count">Showing 16 categories</div>
           </div>
           <div id="category-groups"></div>
-          <div id="no-results" class="no-results" hidden>
-            <p>No categories match your search.</p>
-            <button class="btn" id="clear-filters">Clear filters</button>
+          <div id="no-results" class="no-results">
+            <p>No categories match your filters.</p>
+            <button class="btn" id="clear-filters">Clear all filters</button>
           </div>
         </div>
       </section>
@@ -85,6 +84,7 @@
       </div>
     </footer>
 
+    <script src="products-data.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -95,36 +95,67 @@
 
         const searchInput = document.getElementById('category-search');
         const filterChips = document.querySelectorAll('.filter-chip');
+        const allChip = document.querySelector('[data-filter="all"]');
         const filterCount = document.getElementById('filter-count');
         const noResults = document.getElementById('no-results');
         const clearBtn = document.getElementById('clear-filters');
 
-        // Check if item matches the active filter
-        function matchesFilter(item, group, filter) {
-          if (filter === 'all') return true;
+        // Active filters (supports multiple)
+        let activeFilters = new Set();
+        let searchQuery = '';
 
+        // Check if item matches a single filter
+        function matchesSingleFilter(item, group, filter) {
           const label = item.label.toLowerCase();
+          const tags = item.tags.map(t => t.toLowerCase());
           const groupLower = group.toLowerCase();
 
           // Tier filters
-          if (filter === 'value') return label.includes('value');
-          if (filter === 'core') return label.includes('core');
-          if (filter === 'premium') return label.includes('premium');
+          if (filter === 'value') return label.includes('value') || tags.includes('value');
+          if (filter === 'core') return label.includes('core') || tags.includes('core');
+          if (filter === 'premium') return label.includes('premium') || tags.includes('premium');
 
           // Fit filters
-          if (filter === 'unisex') return label.includes('unisex');
-          if (filter === 'womens') return label.includes("women's");
+          if (filter === 'unisex') return label.includes('unisex') || tags.includes('unisex');
+          if (filter === 'womens') return label.includes("women's") || tags.includes("women's");
 
           // Category filters
-          if (filter === 'headwear') return groupLower.includes('headwear');
-          if (filter === 'outerwear') return groupLower.includes('jackets') || groupLower.includes('outerwear');
-          if (filter === 'bags') return groupLower.includes('bags');
+          if (filter === 'headwear') return groupLower.includes('headwear') || tags.includes('headwear');
+          if (filter === 'outerwear') return groupLower.includes('jackets') || groupLower.includes('outerwear') || tags.includes('outerwear');
+          if (filter === 'bags') return groupLower.includes('bags') || tags.includes('bags');
 
           return true;
         }
 
-        let activeFilter = 'all';
-        let searchQuery = '';
+        // Check if item matches ALL active filters (AND logic)
+        function matchesAllFilters(item, group) {
+          if (activeFilters.size === 0) return true;
+          for (const filter of activeFilters) {
+            if (!matchesSingleFilter(item, group, filter)) return false;
+          }
+          return true;
+        }
+
+        // Update chip visual states
+        function updateChipStates() {
+          filterChips.forEach(chip => {
+            const filter = chip.dataset.filter;
+            if (filter === 'all') {
+              chip.classList.toggle('active', activeFilters.size === 0);
+            } else {
+              chip.classList.toggle('active', activeFilters.has(filter));
+            }
+          });
+        }
+
+        // Reset all filters
+        function resetFilters() {
+          searchInput.value = '';
+          searchQuery = '';
+          activeFilters.clear();
+          updateChipStates();
+          renderCategories();
+        }
 
         function renderCategories() {
           let totalVisible = 0;
@@ -133,8 +164,8 @@
             const filteredItems = groupData.items
               .sort((a, b) => a.sortOrder - b.sortOrder)
               .filter(item => {
-                // Filter by chip
-                if (!matchesFilter(item, groupData.group, activeFilter)) return false;
+                // Filter by chips (AND logic)
+                if (!matchesAllFilters(item, groupData.group)) return false;
                 // Filter by search
                 if (searchQuery) {
                   const haystack = `${item.title} ${item.label} ${item.tags.join(' ')} ${item.blurb}`.toLowerCase();
@@ -172,15 +203,34 @@
 
           container.innerHTML = html;
           filterCount.textContent = `Showing ${totalVisible} categor${totalVisible === 1 ? 'y' : 'ies'}`;
-          noResults.hidden = totalVisible > 0;
+
+          // Animate empty state
+          if (totalVisible === 0) {
+            noResults.classList.add('visible');
+          } else {
+            noResults.classList.remove('visible');
+          }
         }
 
         // Event listeners
         filterChips.forEach(chip => {
           chip.addEventListener('click', () => {
-            filterChips.forEach(c => c.classList.remove('active'));
-            chip.classList.add('active');
-            activeFilter = chip.dataset.filter;
+            const filter = chip.dataset.filter;
+
+            if (filter === 'all') {
+              // "All" resets everything
+              resetFilters();
+              return;
+            }
+
+            // Toggle filter
+            if (activeFilters.has(filter)) {
+              activeFilters.delete(filter);
+            } else {
+              activeFilters.add(filter);
+            }
+
+            updateChipStates();
             renderCategories();
           });
         });
@@ -190,16 +240,10 @@
           renderCategories();
         });
 
-        clearBtn.addEventListener('click', () => {
-          searchInput.value = '';
-          searchQuery = '';
-          activeFilter = 'all';
-          filterChips.forEach(c => c.classList.remove('active'));
-          filterChips[0].classList.add('active');
-          renderCategories();
-        });
+        clearBtn.addEventListener('click', resetFilters);
 
         // Initial render
+        updateChipStates();
         renderCategories();
       })();
     </script>

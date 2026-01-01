@@ -6,7 +6,6 @@
     <title>Category — Merch & Rescue</title>
     <meta name="description" content="Browse products in this category. Quality blanks ready for your custom branding." />
     <link rel="stylesheet" href="styles.css" />
-    <script src="products-data.js" defer></script>
   </head>
   <body>
     <header>
@@ -30,16 +29,25 @@
     </header>
 
     <main>
-      <section class="page-hero section">
+      <section class="page-hero section category-hero">
         <div class="container">
           <p class="kicker"><a href="/products.html" class="back-link">← All Products</a></p>
-          <h1 id="category-title" class="h1 text-center">Category</h1>
-          <p id="category-subtitle" class="sub"></p>
+          <div class="category-hero-header">
+            <span id="tier-badge" class="tier-badge"></span>
+            <h1 id="category-title" class="h1 text-center">Category</h1>
+          </div>
+          <p id="category-subtitle" class="sub category-subtitle"></p>
           <p id="category-blurb" class="hero-blurb"></p>
           <div id="category-tags" class="hero-tags"></div>
           <div class="hero-actions">
-            <a id="quote-cta" class="btn primary" href="/contact.html">Request a Quote</a>
-            <a id="help-cta" class="btn" href="/contact.html">Ask for Recommendations</a>
+            <a id="quote-cta" class="btn primary" href="/contact.html">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+              Request a Quote
+            </a>
+            <a id="help-cta" class="btn" href="/contact.html">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
+              Ask for Recommendations
+            </a>
           </div>
         </div>
       </section>
@@ -165,6 +173,7 @@
       </div>
     </footer>
 
+    <script src="products-data.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -201,9 +210,18 @@
         document.getElementById('category-subtitle').textContent = `${category.group} : ${category.label}`;
         document.getElementById('category-blurb').textContent = category.blurb;
 
-        // Render tags
+        // Set tier badge
+        const tierBadge = document.getElementById('tier-badge');
+        const tier = category.tier || 'core';
+        tierBadge.textContent = tier.charAt(0).toUpperCase() + tier.slice(1);
+        tierBadge.classList.add(`tier-${tier}`);
+
+        // Render tags (filter out tier/fit tags already shown)
         const tagsContainer = document.getElementById('category-tags');
-        tagsContainer.innerHTML = category.tags.map(tag =>
+        const decorationTags = category.tags.filter(tag =>
+          !['Value', 'Core', 'Premium', 'Unisex', "Women's"].includes(tag)
+        );
+        tagsContainer.innerHTML = decorationTags.map(tag =>
           `<span class="hero-tag">${tag}</span>`
         ).join('');
 

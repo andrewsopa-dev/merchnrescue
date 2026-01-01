@@ -2419,6 +2419,17 @@ select.input:focus {
   text-align: center;
   padding: 3rem 1rem;
   color: var(--sub);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, max-height 0.25s ease, padding 0.25s ease;
+  padding: 0 1rem;
+}
+
+.no-results.visible {
+  opacity: 1;
+  max-height: 200px;
+  padding: 3rem 1rem;
 }
 
 .no-results p {
@@ -2593,6 +2604,55 @@ select.input:focus {
 /* Hero actions centered */
 .page-hero .hero-actions {
   justify-content: center;
+}
+
+/* Category hero enhancements */
+.category-hero {
+  padding-bottom: 3rem;
+}
+
+.category-hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-subtitle {
+  margin-top: 0;
+}
+
+/* Tier badge */
+.tier-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.875rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  color: var(--sub);
+}
+
+.tier-badge.tier-value {
+  background: rgba(139, 58, 58, 0.15);
+  border-color: rgba(139, 58, 58, 0.3);
+  color: var(--red-light);
+}
+
+.tier-badge.tier-core {
+  background: rgba(26, 127, 127, 0.15);
+  border-color: rgba(26, 127, 127, 0.3);
+  color: var(--accent-light);
+}
+
+.tier-badge.tier-premium {
+  background: rgba(159, 129, 112, 0.15);
+  border-color: rgba(159, 129, 112, 0.3);
+  color: var(--coyote-light);
 }
 
 /* Showroom grid */

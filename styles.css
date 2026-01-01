@@ -2417,19 +2417,20 @@ select.input:focus {
 /* No results state */
 .no-results {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 0 1rem;
   color: var(--sub);
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+  pointer-events: none;
   transition: opacity 0.25s ease, max-height 0.25s ease, padding 0.25s ease;
-  padding: 0 1rem;
 }
 
 .no-results.visible {
   opacity: 1;
   max-height: 200px;
   padding: 3rem 1rem;
+  pointer-events: auto;
 }
 
 .no-results p {

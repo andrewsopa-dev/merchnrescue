@@ -1,0 +1,68 @@
+{
+  "tees-ss-value": [
+    { "sku": "TSV-001", "name": "Essential Cotton Tee", "description": "5.3 oz preshrunk cotton, classic fit", "colorsCount": 24, "sizeRange": "S-5XL", "tier": "value", "image": "assets/placeholder.svg" },
+    { "sku": "TSV-002", "name": "Budget Crew Tee", "description": "5.0 oz ringspun cotton, unisex fit", "colorsCount": 18, "sizeRange": "S-4XL", "tier": "value", "image": "assets/placeholder.svg" },
+    { "sku": "TSV-003", "name": "Event Tee", "description": "4.5 oz lightweight cotton, relaxed", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "value", "image": "assets/placeholder.svg" },
+    { "sku": "TSV-004", "name": "Promo Cotton Tee", "description": "5.0 oz cotton jersey, standard fit", "colorsCount": 20, "sizeRange": "S-5XL", "tier": "value", "image": "assets/placeholder.svg" },
+    { "sku": "TSV-005", "name": "Workwear Tee", "description": "6.0 oz heavyweight cotton, durable", "colorsCount": 8, "sizeRange": "S-4XL", "tier": "value", "image": "assets/placeholder.svg" },
+    { "sku": "TSV-006", "name": "Basic Crew", "description": "5.5 oz cotton blend, true to size", "colorsCount": 15, "sizeRange": "S-3XL", "tier": "value", "image": "assets/placeholder.svg" }
+  ],
+  "tees-ss-core": [
+    { "sku": "TSC-001", "name": "Retail Soft Tee", "description": "4.2 oz ringspun cotton, slim fit", "colorsCount": 52, "sizeRange": "XS-4XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-002", "name": "CVC Blend Tee", "description": "4.3 oz cotton/poly blend, heathered", "colorsCount": 38, "sizeRange": "XS-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-003", "name": "Sueded Crew", "description": "4.5 oz sueded cotton, modern fit", "colorsCount": 28, "sizeRange": "S-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-004", "name": "Tri-Blend Tee", "description": "3.8 oz poly/cotton/rayon, ultra soft", "colorsCount": 22, "sizeRange": "XS-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-005", "name": "Premium Cotton Tee", "description": "4.5 oz combed ringspun, tailored", "colorsCount": 45, "sizeRange": "XS-4XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-006", "name": "Jersey Crew", "description": "4.0 oz fine jersey, retail fit", "colorsCount": 32, "sizeRange": "S-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-007", "name": "Eco Blend Tee", "description": "4.2 oz recycled materials, soft hand", "colorsCount": 18, "sizeRange": "XS-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TSC-008", "name": "Modal Blend Tee", "description": "4.0 oz modal/cotton, drapes well", "colorsCount": 16, "sizeRange": "S-2XL", "tier": "core", "image": "assets/placeholder.svg" }
+  ],
+  "tees-ss-premium": [
+    { "sku": "TSP-001", "name": "Heavyweight Boxy Tee", "description": "6.5 oz cotton, oversized cut", "colorsCount": 24, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "TSP-002", "name": "Garment-Dyed Tee", "description": "6.1 oz ringspun, vintage wash", "colorsCount": 48, "sizeRange": "S-4XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "TSP-003", "name": "Pigment-Dyed Tee", "description": "5.5 oz cotton, faded finish", "colorsCount": 20, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "TSP-004", "name": "Super Soft Tee", "description": "4.5 oz airlume cotton, luxury hand", "colorsCount": 36, "sizeRange": "XS-3XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "TSP-005", "name": "Thick Cotton Tee", "description": "7.0 oz midweight, structured", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "TSP-006", "name": "French Terry Tee", "description": "5.8 oz french terry, relaxed", "colorsCount": 14, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" }
+  ],
+  "hoodies-core": [
+    { "sku": "HCC-001", "name": "Classic Pullover Hoodie", "description": "8.0 oz fleece, kangaroo pocket", "colorsCount": 28, "sizeRange": "S-4XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "HCC-002", "name": "Midweight Hoodie", "description": "7.5 oz cotton/poly blend", "colorsCount": 22, "sizeRange": "XS-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "HCC-003", "name": "French Terry Hoodie", "description": "6.5 oz french terry, lightweight", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "HCC-004", "name": "Eco Fleece Hoodie", "description": "7.0 oz recycled fleece, soft", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "HCC-005", "name": "Raglan Hoodie", "description": "8.0 oz fleece, raglan sleeves", "colorsCount": 16, "sizeRange": "S-3XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "HCC-006", "name": "Sponge Fleece Hoodie", "description": "8.5 oz sponge fleece, retail fit", "colorsCount": 24, "sizeRange": "XS-3XL", "tier": "core", "image": "assets/placeholder.svg" }
+  ],
+  "hoodies-premium": [
+    { "sku": "HCP-001", "name": "Heavyweight Hoodie", "description": "10.0 oz fleece, oversized fit", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "HCP-002", "name": "Garment-Dyed Hoodie", "description": "9.0 oz ringspun, vintage wash", "colorsCount": 22, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "HCP-003", "name": "Premium Fleece Hoodie", "description": "12.0 oz heavyweight, boxy cut", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "HCP-004", "name": "Cross-Grain Hoodie", "description": "9.5 oz cross-grain fleece", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "HCP-005", "name": "Pigment-Dyed Hoodie", "description": "9.0 oz cotton, faded finish", "colorsCount": 16, "sizeRange": "S-2XL", "tier": "premium", "image": "assets/placeholder.svg" },
+    { "sku": "HCP-006", "name": "Luxe Fleece Hoodie", "description": "11.0 oz brushed fleece, soft", "colorsCount": 10, "sizeRange": "S-3XL", "tier": "premium", "image": "assets/placeholder.svg" }
+  ],
+  "caps-structured": [
+    { "sku": "CST-001", "name": "6-Panel Structured Cap", "description": "Cotton twill, mid-profile", "colorsCount": 24, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CST-002", "name": "5-Panel Snapback", "description": "Wool blend, flat bill", "colorsCount": 18, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CST-003", "name": "Pro-Style Cap", "description": "Cotton/poly, structured crown", "colorsCount": 32, "sizeRange": "S/M-L/XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CST-004", "name": "Performance Cap", "description": "Moisture-wicking, athletic fit", "colorsCount": 14, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CST-005", "name": "Fitted Cap", "description": "Cotton twill, structured", "colorsCount": 20, "sizeRange": "S-XL", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CST-006", "name": "Retro Snapback", "description": "Wool blend, vintage style", "colorsCount": 12, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" }
+  ],
+  "caps-trucker": [
+    { "sku": "CTR-001", "name": "Classic Trucker", "description": "Foam front, mesh back", "colorsCount": 28, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CTR-002", "name": "Low-Profile Trucker", "description": "Cotton front, breathable mesh", "colorsCount": 22, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CTR-003", "name": "Retro Trucker", "description": "Foam front, curved bill", "colorsCount": 18, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CTR-004", "name": "Richardson Trucker", "description": "Cotton/poly, structured", "colorsCount": 45, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CTR-005", "name": "Eco Trucker", "description": "Recycled materials, mesh back", "colorsCount": 12, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "CTR-006", "name": "Snapback Trucker", "description": "Foam front, flat bill", "colorsCount": 16, "sizeRange": "OSFA", "tier": "core", "image": "assets/placeholder.svg" }
+  ],
+  "totes": [
+    { "sku": "TOT-001", "name": "Canvas Tote", "description": "12 oz cotton canvas, 15x16", "colorsCount": 18, "sizeRange": "One Size", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TOT-002", "name": "Zippered Tote", "description": "10 oz canvas, zip closure", "colorsCount": 12, "sizeRange": "One Size", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TOT-003", "name": "Recycled Cotton Tote", "description": "8 oz recycled cotton", "colorsCount": 8, "sizeRange": "One Size", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TOT-004", "name": "Gusseted Tote", "description": "14 oz canvas, bottom gusset", "colorsCount": 14, "sizeRange": "One Size", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TOT-005", "name": "Market Tote", "description": "Lightweight cotton, long handles", "colorsCount": 20, "sizeRange": "One Size", "tier": "core", "image": "assets/placeholder.svg" },
+    { "sku": "TOT-006", "name": "Premium Canvas Tote", "description": "16 oz heavyweight canvas", "colorsCount": 10, "sizeRange": "One Size", "tier": "premium", "image": "assets/placeholder.svg" }
+  ]
+}

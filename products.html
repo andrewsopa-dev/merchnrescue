@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products — Merch & Rescue</title>
+    <meta name="description" content="Browse our curated product categories. Apparel, headwear, drinkware, and more — all ready for your custom branding." />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="products-data.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <a href="/">
+            <img class="logo" src="assets/logo.png" alt="Merch &amp; Rescue logo" />
+          </a>
+        </div>
+        <nav>
+          <div class="links">
+            <a href="/products.html" class="active">Products</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/kits.html">Kits</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </nav>
+        <a class="btn primary" href="/contact.html">Get a Quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <div class="container">
+          <p class="kicker">Products</p>
+          <h1 class="h1 text-center">Featured Categories</h1>
+          <p class="sub">Curated product selections across apparel, accessories, and promotional items. Quality blanks ready for your custom branding — sourced from trusted suppliers with competitive pricing.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#">View Category Deck</a>
+            <a class="btn" href="#">View Supplier Catalog</a>
+          </div>
+          <p class="helper-text">This is a curated blank selector — not a cart. Pick a category and tell us your quantity, timeline, and decoration method. We'll quote and source the best options for your project.</p>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="filter-bar">
+            <div class="filter-search">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+              <input type="text" id="category-search" placeholder="Search categories..." autocomplete="off" />
+            </div>
+            <div class="filter-chips">
+              <button class="filter-chip active" data-filter="all">All</button>
+              <button class="filter-chip" data-filter="value">Value</button>
+              <button class="filter-chip" data-filter="core">Core</button>
+              <button class="filter-chip" data-filter="premium">Premium</button>
+              <button class="filter-chip" data-filter="unisex">Unisex</button>
+              <button class="filter-chip" data-filter="womens">Women's</button>
+              <button class="filter-chip" data-filter="headwear">Headwear</button>
+              <button class="filter-chip" data-filter="outerwear">Outerwear</button>
+              <button class="filter-chip" data-filter="bags">Bags</button>
+            </div>
+            <div class="filter-count" id="filter-count">Showing 16 categories</div>
+          </div>
+          <div id="category-groups"></div>
+          <div id="no-results" class="no-results" hidden>
+            <p>No categories match your search.</p>
+            <button class="btn" id="clear-filters">Clear filters</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="brand">
+          <div class="chip" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+          </div>
+          <span>MERCH &amp; RESCUE</span>
+        </div>
+        <div class="small"><a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Terms</a> &nbsp;|&nbsp; <a href="#">Accessibility</a></div>
+        <div class="small">© <span id="year"></span> Merch &amp; Rescue</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Render category groups from products-data.js
+      (function() {
+        const container = document.getElementById('category-groups');
+        if (!container || typeof PRODUCT_CATEGORIES === 'undefined') return;
+
+        const searchInput = document.getElementById('category-search');
+        const filterChips = document.querySelectorAll('.filter-chip');
+        const filterCount = document.getElementById('filter-count');
+        const noResults = document.getElementById('no-results');
+        const clearBtn = document.getElementById('clear-filters');
+
+        // Check if item matches the active filter
+        function matchesFilter(item, group, filter) {
+          if (filter === 'all') return true;
+
+          const label = item.label.toLowerCase();
+          const groupLower = group.toLowerCase();
+
+          // Tier filters
+          if (filter === 'value') return label.includes('value');
+          if (filter === 'core') return label.includes('core');
+          if (filter === 'premium') return label.includes('premium');
+
+          // Fit filters
+          if (filter === 'unisex') return label.includes('unisex');
+          if (filter === 'womens') return label.includes("women's");
+
+          // Category filters
+          if (filter === 'headwear') return groupLower.includes('headwear');
+          if (filter === 'outerwear') return groupLower.includes('jackets') || groupLower.includes('outerwear');
+          if (filter === 'bags') return groupLower.includes('bags');
+
+          return true;
+        }
+
+        let activeFilter = 'all';
+        let searchQuery = '';
+
+        function renderCategories() {
+          let totalVisible = 0;
+
+          const html = PRODUCT_CATEGORIES.map(groupData => {
+            const filteredItems = groupData.items
+              .sort((a, b) => a.sortOrder - b.sortOrder)
+              .filter(item => {
+                // Filter by chip
+                if (!matchesFilter(item, groupData.group, activeFilter)) return false;
+                // Filter by search
+                if (searchQuery) {
+                  const haystack = `${item.title} ${item.label} ${item.tags.join(' ')} ${item.blurb}`.toLowerCase();
+                  if (!haystack.includes(searchQuery.toLowerCase())) return false;
+                }
+                return true;
+              });
+
+            totalVisible += filteredItems.length;
+
+            if (filteredItems.length === 0) return '';
+
+            return `
+              <div class="category-group">
+                <h3 class="category-group-title">${groupData.group}</h3>
+                <div class="category-grid">
+                  ${filteredItems.map(item => `
+                    <a href="category.html?c=${item.id}" class="category-card">
+                      <div class="category-card-content">
+                        <div class="category-header">
+                          <span class="category-title">${item.title}</span>
+                          <span class="category-label">${item.label}</span>
+                        </div>
+                        <p class="category-blurb">${item.blurb}</p>
+                        <div class="category-tags">
+                          ${item.tags.slice(0, 3).map(tag => `<span class="category-tag">${tag}</span>`).join('')}
+                        </div>
+                      </div>
+                      <svg class="category-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                    </a>
+                  `).join('')}
+                </div>
+              </div>`;
+          }).join('');
+
+          container.innerHTML = html;
+          filterCount.textContent = `Showing ${totalVisible} categor${totalVisible === 1 ? 'y' : 'ies'}`;
+          noResults.hidden = totalVisible > 0;
+        }
+
+        // Event listeners
+        filterChips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            filterChips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            activeFilter = chip.dataset.filter;
+            renderCategories();
+          });
+        });
+
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim();
+          renderCategories();
+        });
+
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          activeFilter = 'all';
+          filterChips.forEach(c => c.classList.remove('active'));
+          filterChips[0].classList.add('active');
+          renderCategories();
+        });
+
+        // Initial render
+        renderCategories();
+      })();
+    </script>
+  </body>
+</html>

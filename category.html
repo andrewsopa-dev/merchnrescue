@@ -174,6 +174,7 @@
     </footer>
 
     <script src="products-data.js"></script>
+    <script src="catalog-provider.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -264,12 +265,9 @@
         gallery.innerHTML = placeholders;
 
         // Fetch and render catalog preview
-        fetch('/api/catalog.json')
-          .then(res => res.ok ? res.json() : null)
-          .then(catalog => {
-            if (!catalog || !catalog[categoryId]) return;
-
-            const items = catalog[categoryId].slice(0, 12);
+        CatalogProvider.getCatalogItemsByCategory(categoryId)
+          .then(items => {
+            items = items.slice(0, 12);
             if (items.length === 0) return;
 
             const catalogSection = document.getElementById('catalog-section');
@@ -295,8 +293,7 @@
             `).join('');
 
             catalogSection.hidden = false;
-          })
-          .catch(() => {});
+          });
       })();
     </script>
   </body>

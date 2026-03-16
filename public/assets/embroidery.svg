@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1110"/>
+      <stop offset="1" stop-color="#0f1816"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect x="20" y="20" width="1560" height="1160" rx="28" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)"/>
+  
+  <g transform="translate(0,10)">
+    <g filter="url(#softShadow)">
+      <circle cx="800" cy="560" r="280" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.9)" stroke-width="10"/>
+      <circle cx="800" cy="560" r="210" fill="none" stroke="url(#emerald)" stroke-width="10" opacity=".8"/>
+      <path d="M780,380 Q840,460 900,540" stroke="rgba(255,255,255,.9)" stroke-width="8" fill="none"/>
+      <path d="M890,540 L1140,840" stroke="rgba(255,255,255,.9)" stroke-width="8" fill="none"/>
+      <circle cx="1140" cy="840" r="14" fill="#ffffff"/>
+      <path d="M900,540 Q820,560 780,640" stroke="rgba(255,255,255,.9)" stroke-width="8" fill="none"/>
+    </g>
+    <ellipse cx="800" cy="920" rx="420" ry="60" fill="#34d399" opacity=".08" filter="url(#glow)"/>
+  </g>
+
+</svg>

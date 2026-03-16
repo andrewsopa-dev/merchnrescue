@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1110"/>
+      <stop offset="1" stop-color="#0f1816"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect x="20" y="20" width="1560" height="1160" rx="28" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)"/>
+  
+  <g transform="translate(0,40)">
+    <g filter="url(#softShadow)" stroke="rgba(255,255,255,.9)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Main rotor -->
+      <line x1="220" y1="180" x2="1380" y2="180"/>
+      <line x1="800" y1="180" x2="800" y2="300"/>
+      <!-- Fuselage -->
+      <rect x="560" y="300" width="480" height="180" rx="28" fill="rgba(255,255,255,.08)"/>
+      <circle cx="610" cy="390" r="60" fill="rgba(255,255,255,.08)"/>
+      <!-- Tail boom -->
+      <path d="M1040,390 L1320,440" fill="none"/>
+      <circle cx="1340" cy="450" r="36" fill="none"/>
+      <!-- Skids -->
+      <path d="M600,500 L1000,500" fill="none"/>
+      <path d="M560,530 L640,500" fill="none"/>
+      <path d="M960,500 L1040,530" fill="none"/>
+      <!-- Accent stripe -->
+      <path d="M580,340 H1000" stroke="url(#emerald)" stroke-width="10"/>
+    </g>
+    <!-- Soft emerald glow -->
+    <ellipse cx="800" cy="520" rx="420" ry="60" fill="#34d399" opacity=".08" filter="url(#glow)"/>
+  </g>
+
+</svg>

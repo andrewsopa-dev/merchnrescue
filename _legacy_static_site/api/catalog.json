@@ -1,0 +1,172 @@
+{
+  "tees-ss-value": [
+    { "sku": "TSV-001", "name": "Essential Cotton Tee", "description": "5.3 oz preshrunk cotton, classic fit", "colorsCount": 24, "sizeRange": "S-5XL", "tier": "value" },
+    { "sku": "TSV-002", "name": "Budget Crew Tee", "description": "5.0 oz ringspun cotton, unisex fit", "colorsCount": 18, "sizeRange": "S-4XL", "tier": "value" },
+    { "sku": "TSV-003", "name": "Event Tee", "description": "4.5 oz lightweight cotton, relaxed", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "value" },
+    { "sku": "TSV-004", "name": "Promo Cotton Tee", "description": "5.0 oz cotton jersey, standard fit", "colorsCount": 20, "sizeRange": "S-5XL", "tier": "value" },
+    { "sku": "TSV-005", "name": "Workwear Tee", "description": "6.0 oz heavyweight cotton, durable", "colorsCount": 8, "sizeRange": "S-4XL", "tier": "value" },
+    { "sku": "TSV-006", "name": "Basic Crew", "description": "5.5 oz cotton blend, true to size", "colorsCount": 15, "sizeRange": "S-3XL", "tier": "value" }
+  ],
+  "tees-ss-core": [
+    { "sku": "TSC-001", "name": "Retail Soft Tee", "description": "4.2 oz ringspun cotton, slim fit", "colorsCount": 52, "sizeRange": "XS-4XL", "tier": "core" },
+    { "sku": "TSC-002", "name": "CVC Blend Tee", "description": "4.3 oz cotton/poly blend, heathered", "colorsCount": 38, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "TSC-003", "name": "Sueded Crew", "description": "4.5 oz sueded cotton, modern fit", "colorsCount": 28, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "TSC-004", "name": "Tri-Blend Tee", "description": "3.8 oz poly/cotton/rayon, ultra soft", "colorsCount": 22, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "TSC-005", "name": "Premium Cotton Tee", "description": "4.5 oz combed ringspun, tailored", "colorsCount": 45, "sizeRange": "XS-4XL", "tier": "core" },
+    { "sku": "TSC-006", "name": "Jersey Crew", "description": "4.0 oz fine jersey, retail fit", "colorsCount": 32, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "TSC-007", "name": "Eco Blend Tee", "description": "4.2 oz recycled materials, soft hand", "colorsCount": 18, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "TSC-008", "name": "Modal Blend Tee", "description": "4.0 oz modal/cotton, drapes well", "colorsCount": 16, "sizeRange": "S-2XL", "tier": "core" }
+  ],
+  "tees-ss-premium": [
+    { "sku": "TSP-001", "name": "Heavyweight Boxy Tee", "description": "6.5 oz cotton, oversized cut", "colorsCount": 24, "sizeRange": "S-3XL", "tier": "premium" },
+    { "sku": "TSP-002", "name": "Garment-Dyed Tee", "description": "6.1 oz ringspun, vintage wash", "colorsCount": 48, "sizeRange": "S-4XL", "tier": "premium" },
+    { "sku": "TSP-003", "name": "Pigment-Dyed Tee", "description": "5.5 oz cotton, faded finish", "colorsCount": 20, "sizeRange": "S-3XL", "tier": "premium" },
+    { "sku": "TSP-004", "name": "Super Soft Tee", "description": "4.5 oz airlume cotton, luxury hand", "colorsCount": 36, "sizeRange": "XS-3XL", "tier": "premium" },
+    { "sku": "TSP-005", "name": "Thick Cotton Tee", "description": "7.0 oz midweight, structured", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "premium" },
+    { "sku": "TSP-006", "name": "French Terry Tee", "description": "5.8 oz french terry, relaxed", "colorsCount": 14, "sizeRange": "S-3XL", "tier": "premium" }
+  ],
+  "tees-ls": [
+    { "sku": "TLS-001", "name": "Long Sleeve Cotton", "description": "5.3 oz cotton, classic fit", "colorsCount": 20, "sizeRange": "S-4XL", "tier": "core" },
+    { "sku": "TLS-002", "name": "Ringspun Long Sleeve", "description": "4.5 oz ringspun, modern fit", "colorsCount": 28, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "TLS-003", "name": "Thermal Henley", "description": "5.0 oz waffle knit, 3-button", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "TLS-004", "name": "Tri-Blend Long Sleeve", "description": "4.0 oz tri-blend, soft hand", "colorsCount": 16, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "TLS-005", "name": "Heavyweight LS", "description": "6.0 oz cotton, durable", "colorsCount": 10, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "TLS-006", "name": "Jersey Long Sleeve", "description": "4.3 oz jersey, retail fit", "colorsCount": 24, "sizeRange": "S-3XL", "tier": "core" }
+  ],
+  "tees-womens": [
+    { "sku": "TWF-001", "name": "Slim Fit Tee", "description": "4.2 oz ringspun, fitted cut", "colorsCount": 36, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "TWF-002", "name": "Relaxed V-Neck", "description": "4.5 oz cotton, flowy fit", "colorsCount": 28, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "TWF-003", "name": "Scoop Neck Tee", "description": "4.0 oz jersey, modern cut", "colorsCount": 22, "sizeRange": "XS-2XL", "tier": "core" },
+    { "sku": "TWF-004", "name": "Cropped Tee", "description": "4.2 oz cotton, cropped length", "colorsCount": 18, "sizeRange": "XS-XL", "tier": "core" },
+    { "sku": "TWF-005", "name": "Boyfriend Tee", "description": "4.5 oz cotton, relaxed fit", "colorsCount": 24, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "TWF-006", "name": "Tri-Blend Dolman", "description": "3.8 oz tri-blend, dolman sleeve", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "core" }
+  ],
+  "tanks": [
+    { "sku": "TNK-001", "name": "Classic Tank", "description": "4.5 oz cotton, standard cut", "colorsCount": 20, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "TNK-002", "name": "Racerback Tank", "description": "4.0 oz poly/cotton, athletic", "colorsCount": 24, "sizeRange": "XS-2XL", "tier": "core" },
+    { "sku": "TNK-003", "name": "Muscle Tank", "description": "4.3 oz cotton, dropped armhole", "colorsCount": 16, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "TNK-004", "name": "Flowy Tank", "description": "3.7 oz poly/viscose, drapey", "colorsCount": 18, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "TNK-005", "name": "Performance Tank", "description": "3.8 oz moisture-wicking", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "TNK-006", "name": "Cropped Tank", "description": "4.0 oz cotton, cropped fit", "colorsCount": 14, "sizeRange": "XS-XL", "tier": "core" }
+  ],
+  "hoodies-value": [
+    { "sku": "HVL-001", "name": "Basic Pullover Hoodie", "description": "7.8 oz fleece, front pocket", "colorsCount": 16, "sizeRange": "S-5XL", "tier": "value" },
+    { "sku": "HVL-002", "name": "Budget Zip Hoodie", "description": "7.5 oz fleece, full zip", "colorsCount": 12, "sizeRange": "S-4XL", "tier": "value" },
+    { "sku": "HVL-003", "name": "Economy Hoodie", "description": "8.0 oz cotton/poly blend", "colorsCount": 10, "sizeRange": "S-3XL", "tier": "value" },
+    { "sku": "HVL-004", "name": "Event Hoodie", "description": "7.0 oz lightweight fleece", "colorsCount": 14, "sizeRange": "S-4XL", "tier": "value" },
+    { "sku": "HVL-005", "name": "Pullover Sweatshirt", "description": "7.8 oz fleece, no hood", "colorsCount": 18, "sizeRange": "S-5XL", "tier": "value" },
+    { "sku": "HVL-006", "name": "Promo Hoodie", "description": "7.5 oz blended fleece", "colorsCount": 8, "sizeRange": "S-3XL", "tier": "value" }
+  ],
+  "hoodies-core": [
+    { "sku": "HCC-001", "name": "Classic Pullover Hoodie", "description": "8.0 oz fleece, kangaroo pocket", "colorsCount": 28, "sizeRange": "S-4XL", "tier": "core" },
+    { "sku": "HCC-002", "name": "Midweight Hoodie", "description": "7.5 oz cotton/poly blend", "colorsCount": 22, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "HCC-003", "name": "French Terry Hoodie", "description": "6.5 oz french terry, lightweight", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "HCC-004", "name": "Eco Fleece Hoodie", "description": "7.0 oz recycled fleece, soft", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "HCC-005", "name": "Raglan Hoodie", "description": "8.0 oz fleece, raglan sleeves", "colorsCount": 16, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "HCC-006", "name": "Sponge Fleece Hoodie", "description": "8.5 oz sponge fleece, retail fit", "colorsCount": 24, "sizeRange": "XS-3XL", "tier": "core" }
+  ],
+  "hoodies-premium": [
+    { "sku": "HCP-001", "name": "Heavyweight Hoodie", "description": "10.0 oz fleece, oversized fit", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "premium" },
+    { "sku": "HCP-002", "name": "Garment-Dyed Hoodie", "description": "9.0 oz ringspun, vintage wash", "colorsCount": 22, "sizeRange": "S-3XL", "tier": "premium" },
+    { "sku": "HCP-003", "name": "Premium Fleece Hoodie", "description": "12.0 oz heavyweight, boxy cut", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "premium" },
+    { "sku": "HCP-004", "name": "Cross-Grain Hoodie", "description": "9.5 oz cross-grain fleece", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "premium" },
+    { "sku": "HCP-005", "name": "Pigment-Dyed Hoodie", "description": "9.0 oz cotton, faded finish", "colorsCount": 16, "sizeRange": "S-2XL", "tier": "premium" },
+    { "sku": "HCP-006", "name": "Luxe Fleece Hoodie", "description": "11.0 oz brushed fleece, soft", "colorsCount": 10, "sizeRange": "S-3XL", "tier": "premium" }
+  ],
+  "hoodies-zip": [
+    { "sku": "HZP-001", "name": "Full-Zip Hoodie", "description": "8.0 oz fleece, full zip front", "colorsCount": 24, "sizeRange": "S-4XL", "tier": "core" },
+    { "sku": "HZP-002", "name": "Lightweight Zip", "description": "6.5 oz french terry, zip up", "colorsCount": 18, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "HZP-003", "name": "Tech Zip Hoodie", "description": "7.0 oz poly blend, athletic", "colorsCount": 14, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "HZP-004", "name": "Premium Zip Hoodie", "description": "9.0 oz fleece, metal zipper", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "HZP-005", "name": "Eco Zip Hoodie", "description": "7.5 oz recycled fleece", "colorsCount": 10, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "HZP-006", "name": "Slim Fit Zip", "description": "7.0 oz fleece, tailored cut", "colorsCount": 16, "sizeRange": "XS-2XL", "tier": "core" }
+  ],
+  "crews": [
+    { "sku": "CRW-001", "name": "Classic Crewneck", "description": "8.0 oz fleece, ribbed cuffs", "colorsCount": 26, "sizeRange": "S-4XL", "tier": "core" },
+    { "sku": "CRW-002", "name": "French Terry Crew", "description": "6.5 oz french terry, modern", "colorsCount": 20, "sizeRange": "XS-3XL", "tier": "core" },
+    { "sku": "CRW-003", "name": "Heavyweight Crew", "description": "10.0 oz fleece, oversized", "colorsCount": 14, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "CRW-004", "name": "Vintage Crewneck", "description": "8.5 oz garment-dyed fleece", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "CRW-005", "name": "Eco Crewneck", "description": "7.5 oz recycled fleece", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "CRW-006", "name": "Raglan Crewneck", "description": "8.0 oz fleece, raglan sleeve", "colorsCount": 16, "sizeRange": "S-3XL", "tier": "core" }
+  ],
+  "caps-structured": [
+    { "sku": "CST-001", "name": "6-Panel Structured Cap", "description": "Cotton twill, mid-profile", "colorsCount": 24, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CST-002", "name": "5-Panel Snapback", "description": "Wool blend, flat bill", "colorsCount": 18, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CST-003", "name": "Pro-Style Cap", "description": "Cotton/poly, structured crown", "colorsCount": 32, "sizeRange": "S/M-L/XL", "tier": "core" },
+    { "sku": "CST-004", "name": "Performance Cap", "description": "Moisture-wicking, athletic fit", "colorsCount": 14, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CST-005", "name": "Fitted Cap", "description": "Cotton twill, structured", "colorsCount": 20, "sizeRange": "S-XL", "tier": "core" },
+    { "sku": "CST-006", "name": "Retro Snapback", "description": "Wool blend, vintage style", "colorsCount": 12, "sizeRange": "OSFA", "tier": "core" }
+  ],
+  "caps-dad": [
+    { "sku": "CDH-001", "name": "Classic Dad Hat", "description": "Washed cotton, unstructured", "colorsCount": 28, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CDH-002", "name": "Vintage Wash Dad Hat", "description": "Pigment-dyed, relaxed fit", "colorsCount": 22, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CDH-003", "name": "Twill Dad Hat", "description": "Cotton twill, low profile", "colorsCount": 20, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CDH-004", "name": "Eco Dad Hat", "description": "Recycled cotton, soft", "colorsCount": 14, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CDH-005", "name": "Garment-Dyed Dad Hat", "description": "100% cotton, faded look", "colorsCount": 18, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CDH-006", "name": "Canvas Dad Hat", "description": "Heavy canvas, durable", "colorsCount": 10, "sizeRange": "OSFA", "tier": "core" }
+  ],
+  "caps-trucker": [
+    { "sku": "CTR-001", "name": "Classic Trucker", "description": "Foam front, mesh back", "colorsCount": 28, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CTR-002", "name": "Low-Profile Trucker", "description": "Cotton front, breathable mesh", "colorsCount": 22, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CTR-003", "name": "Retro Trucker", "description": "Foam front, curved bill", "colorsCount": 18, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CTR-004", "name": "Premium Trucker", "description": "Cotton/poly, structured", "colorsCount": 45, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CTR-005", "name": "Eco Trucker", "description": "Recycled materials, mesh back", "colorsCount": 12, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "CTR-006", "name": "Snapback Trucker", "description": "Foam front, flat bill", "colorsCount": 16, "sizeRange": "OSFA", "tier": "core" }
+  ],
+  "beanies": [
+    { "sku": "BNE-001", "name": "Classic Cuff Beanie", "description": "Acrylic knit, fold-over cuff", "colorsCount": 24, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "BNE-002", "name": "Slouch Beanie", "description": "Soft knit, relaxed fit", "colorsCount": 18, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "BNE-003", "name": "Pom Beanie", "description": "Knit with faux fur pom", "colorsCount": 14, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "BNE-004", "name": "Ribbed Beanie", "description": "Tight rib knit, fitted", "colorsCount": 20, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "BNE-005", "name": "Fleece-Lined Beanie", "description": "Knit exterior, warm lining", "colorsCount": 12, "sizeRange": "OSFA", "tier": "core" },
+    { "sku": "BNE-006", "name": "Chunky Knit Beanie", "description": "Thick cable knit, cozy", "colorsCount": 10, "sizeRange": "OSFA", "tier": "core" }
+  ],
+  "backpacks": [
+    { "sku": "BPK-001", "name": "Classic Backpack", "description": "600D poly, laptop sleeve", "colorsCount": 16, "sizeRange": "18L", "tier": "core" },
+    { "sku": "BPK-002", "name": "Slim Laptop Pack", "description": "Padded compartment, slim profile", "colorsCount": 12, "sizeRange": "15L", "tier": "core" },
+    { "sku": "BPK-003", "name": "Drawstring Bag", "description": "Lightweight, cinch closure", "colorsCount": 24, "sizeRange": "14L", "tier": "core" },
+    { "sku": "BPK-004", "name": "Canvas Backpack", "description": "Heavy canvas, leather trim", "colorsCount": 8, "sizeRange": "20L", "tier": "core" },
+    { "sku": "BPK-005", "name": "Sport Backpack", "description": "Mesh panels, athletic style", "colorsCount": 14, "sizeRange": "22L", "tier": "core" },
+    { "sku": "BPK-006", "name": "Premium Backpack", "description": "1000D nylon, waterproof", "colorsCount": 10, "sizeRange": "25L", "tier": "core" }
+  ],
+  "totes": [
+    { "sku": "TOT-001", "name": "Canvas Tote", "description": "12 oz cotton canvas, 15x16", "colorsCount": 18, "sizeRange": "One Size", "tier": "core" },
+    { "sku": "TOT-002", "name": "Zippered Tote", "description": "10 oz canvas, zip closure", "colorsCount": 12, "sizeRange": "One Size", "tier": "core" },
+    { "sku": "TOT-003", "name": "Recycled Cotton Tote", "description": "8 oz recycled cotton", "colorsCount": 8, "sizeRange": "One Size", "tier": "core" },
+    { "sku": "TOT-004", "name": "Gusseted Tote", "description": "14 oz canvas, bottom gusset", "colorsCount": 14, "sizeRange": "One Size", "tier": "core" },
+    { "sku": "TOT-005", "name": "Market Tote", "description": "Lightweight cotton, long handles", "colorsCount": 20, "sizeRange": "One Size", "tier": "core" },
+    { "sku": "TOT-006", "name": "Premium Canvas Tote", "description": "16 oz heavyweight canvas", "colorsCount": 10, "sizeRange": "One Size", "tier": "premium" }
+  ],
+  "polos-core": [
+    { "sku": "POC-001", "name": "Classic Pique Polo", "description": "5.6 oz cotton pique, 3-button", "colorsCount": 28, "sizeRange": "S-4XL", "tier": "core" },
+    { "sku": "POC-002", "name": "Performance Polo", "description": "4.0 oz moisture-wicking poly", "colorsCount": 22, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "POC-003", "name": "Jersey Polo", "description": "5.0 oz cotton jersey, soft", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "POC-004", "name": "Tech Polo", "description": "4.5 oz poly blend, athletic", "colorsCount": 16, "sizeRange": "S-4XL", "tier": "core" },
+    { "sku": "POC-005", "name": "Eco Polo", "description": "5.0 oz recycled materials", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "POC-006", "name": "Contrast Polo", "description": "5.6 oz pique, contrast collar", "colorsCount": 14, "sizeRange": "S-3XL", "tier": "core" }
+  ],
+  "coach-jackets": [
+    { "sku": "COJ-001", "name": "Classic Coach Jacket", "description": "Nylon shell, snap front", "colorsCount": 16, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "COJ-002", "name": "Lined Coach Jacket", "description": "Nylon with flannel lining", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "COJ-003", "name": "Lightweight Coach", "description": "Ripstop nylon, unlined", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "COJ-004", "name": "Vintage Coach Jacket", "description": "Cotton/poly blend, retro", "colorsCount": 10, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "COJ-005", "name": "Waterproof Coach", "description": "Coated nylon, water-resistant", "colorsCount": 8, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "COJ-006", "name": "Coaches Jacket", "description": "Twill shell, quilted lining", "colorsCount": 12, "sizeRange": "S-2XL", "tier": "core" }
+  ],
+  "windbreakers": [
+    { "sku": "WBK-001", "name": "Pullover Windbreaker", "description": "Nylon, half-zip front", "colorsCount": 18, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "WBK-002", "name": "Full-Zip Windbreaker", "description": "Lightweight nylon, packable", "colorsCount": 16, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "WBK-003", "name": "Anorak", "description": "Quarter-zip, kangaroo pocket", "colorsCount": 14, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "WBK-004", "name": "Lined Windbreaker", "description": "Nylon with mesh lining", "colorsCount": 12, "sizeRange": "S-3XL", "tier": "core" },
+    { "sku": "WBK-005", "name": "Retro Windbreaker", "description": "Color-block design, 90s style", "colorsCount": 10, "sizeRange": "S-2XL", "tier": "core" },
+    { "sku": "WBK-006", "name": "Athletic Windbreaker", "description": "Performance nylon, vented", "colorsCount": 14, "sizeRange": "S-3XL", "tier": "core" }
+  ],
+  "drinkware": [
+    { "sku": "DRK-001", "name": "Stainless Tumbler 20oz", "description": "Double-wall insulated, lid", "colorsCount": 16, "sizeRange": "20oz", "tier": "core" },
+    { "sku": "DRK-002", "name": "Stainless Tumbler 30oz", "description": "Double-wall insulated, lid", "colorsCount": 16, "sizeRange": "30oz", "tier": "core" },
+    { "sku": "DRK-003", "name": "Water Bottle 24oz", "description": "Stainless steel, flip lid", "colorsCount": 14, "sizeRange": "24oz", "tier": "core" },
+    { "sku": "DRK-004", "name": "Ceramic Mug 11oz", "description": "Classic ceramic, C-handle", "colorsCount": 12, "sizeRange": "11oz", "tier": "core" },
+    { "sku": "DRK-005", "name": "Ceramic Mug 15oz", "description": "Large ceramic, comfortable grip", "colorsCount": 10, "sizeRange": "15oz", "tier": "core" },
+    { "sku": "DRK-006", "name": "Travel Mug 16oz", "description": "Stainless, spill-proof lid", "colorsCount": 12, "sizeRange": "16oz", "tier": "core" }
+  ]
+}

@@ -1,15 +1,32 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useCart } from "@/store/cart";
+import { ArrowRight, Menu, X, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
+function CartBadge() {
+    const [mounted, setMounted] = useState(false);
+    const count = useCart(state => state.getCartCount());
+    
+    React.useEffect(() => setMounted(true), []);
+    
+    if (!mounted || count === 0) return null;
+    return (
+        <span className="absolute -top-1 -right-1 bg-brand-teal text-white text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full">
+            {count}
+        </span>
+    );
+}
+
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { data: session } = useSession();
 
     return (
         <header className="sticky top-0 z-40 border-b border-white/10 bg-brand-black/80 backdrop-blur-md">
@@ -27,13 +44,41 @@ export function Navbar() {
                         <Link className="hover:text-brand-teal transition-colors" href="/#process">Process</Link>
                         <Link className="hover:text-brand-teal transition-colors" href="/#gallery">Gallery</Link>
                         <Link className="hover:text-brand-teal transition-colors" href="/upload">Upload</Link>
+                        <Link className="hover:text-brand-teal transition-colors" href="/terminal">Terminal</Link>
                         <Link className="hover:text-brand-teal transition-colors" href="/#contact">Contact</Link>
                     </nav>
 
-                    <div className="hidden md:flex items-center gap-3">
-                        <Button as="link" href="#quote" className="bg-brand-teal text-white hover:bg-[#156666] pointer-events-auto font-display tracking-wide uppercase">
-                            Get a Quote <ArrowRight className="h-4 w-4" />
-                        </Button>
+                    <div className="hidden md:flex items-center gap-4">
+                        {session ? (
+                           <div className="flex items-center gap-4 border-r border-white/10 pr-4 mr-2">
+                               <Link href="/dashboard" className="text-sm font-bold tracking-widest text-brand-teal hover:text-white transition-colors uppercase flex items-center gap-2 group">
+                                   {session.user?.image ? (
+                                       <Image src={session.user.image} alt={session.user?.name || "User"} width={24} height={24} className="rounded-full border border-brand-teal group-hover:border-white transition-colors" unoptimized />
+                                   ) : (
+                                       <span className="h-6 w-6 rounded-full bg-brand-teal text-[#111] flex items-center justify-center text-xs group-hover:bg-white transition-colors">
+                                           {session.user?.name?.charAt(0) || session.user?.email?.charAt(0) || "U"}
+                                       </span>
+                                   )}
+                                   Dashboard
+                               </Link>
+                               <button onClick={() => signOut()} className="text-[10px] font-bold tracking-widest text-white/30 hover:text-red-400 transition-colors uppercase">
+                                   Sign Out
+                               </button>
+                           </div>
+                        ) : (
+                            <button onClick={() => signIn("github")} className="text-sm font-bold tracking-widest text-white/50 hover:text-white transition-colors uppercase border-r border-white/10 pr-4 mr-2">
+                                Operator Login
+                            </button>
+                        )}
+                        {/* Cart Trigger */}
+                        <button 
+                            onClick={useCart.getState().toggleDrawer} 
+                            className="relative p-2 text-white hover:text-brand-teal transition-colors"
+                            aria-label="Open Cart"
+                        >
+                            <ShoppingCart className="h-5 w-5" />
+                            <CartBadge />
+                        </button>
                     </div>
 
                     <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" aria-expanded={isOpen}>

@@ -51,6 +51,7 @@ export default function KitBuilderPage() {
                                 kicker="Configure Your Kit"
                                 title="Deployable Kit Builder"
                                 subtitle="Choose a kit template to get started, then customize products, sizes, and quantities."
+                                as="h1"
                             />
 
                             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

@@ -15,7 +15,13 @@ export async function POST(request: Request) {
             );
         }
 
-        const { name, email, details, artworkUrl } = result.data;
+        const { name, email, details, artworkUrl, company_website } = result.data;
+
+        // Spam protection: honeypot field
+        if (company_website && company_website.length > 0) {
+            console.log(`[SPAM BLOCKED] Honeypot filled by ${email}`);
+            return NextResponse.json({ success: true, message: "Quote request received" }); // lie to the bot
+        }
         // ... (logging remains same) ...
 
         console.log(`[ENTERPRISE QUOTE] From: ${name} (${email}) - ${details} [Art: ${artworkUrl || 'None'}]`);

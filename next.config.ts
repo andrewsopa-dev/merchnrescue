@@ -5,16 +5,29 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdnp.sanmar.com',
+        hostname: 'www.sanmar.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'www.sanmar.com',
+        hostname: 'cdn.sanmar.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdnp.sanmar.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'previews.us-east-1.widencdn.net',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'sanmarsports.com',
-      },
+        pathname: '/**',
+      }
     ],
   },
 };

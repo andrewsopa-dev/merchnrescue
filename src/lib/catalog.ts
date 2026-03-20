@@ -66,7 +66,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "T-Shirts",
         items: [
             {
-                id: "gildan-5000",
+                id: "5000",
                 title: "Heavy Cotton™ 100% Cotton T-Shirt",
                 brand: "Gildan",
                 label: "Value Standard",
@@ -91,7 +91,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1
             },
             {
-                id: "gildan-64000",
+                id: "64000",
                 title: "Softstyle® T-Shirt",
                 brand: "Gildan",
                 label: "Value Fashion",
@@ -114,7 +114,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1.5
             },
             {
-                id: "nl-3600",
+                id: "NL3600",
                 title: "Premium Cotton Crew",
                 brand: "Next Level Apparel",
                 label: "Core Softspun",
@@ -140,7 +140,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 imageScale: 1.15
             },
             {
-                id: "nl-6210",
+                id: "NL6210",
                 title: "CVC Crew",
                 brand: "Next Level Apparel",
                 label: "Premium Blend",
@@ -163,7 +163,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 2.5
             },
             {
-                id: "nl-6010",
+                id: "NL6010",
                 title: "Tri-Blend Crew",
                 brand: "Next Level Apparel",
                 label: "Premium Tri-Blend",
@@ -184,7 +184,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 2.8
             },
             {
-                id: "mm-1016",
+                id: "MM1016",
                 title: "Stretch Jersey Crew",
                 brand: "Mercer+Mettle",
                 label: "Premium Performance",
@@ -210,7 +210,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "Hoodies & Fleece",
         items: [
             {
-                id: "gildan-18500",
+                id: "18500",
                 title: "Heavy Blend™ Hooded Sweatshirt",
                 brand: "Gildan",
                 label: "Value Standard",
@@ -235,7 +235,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1
             },
             {
-                id: "nl-9300",
+                id: "NL9300",
                 title: "Malibu Pullover Hoodie",
                 brand: "Next Level Apparel",
                 label: "Premium Standard",
@@ -258,7 +258,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 imageScale: 1.12
             },
             {
-                id: "champion-s600",
+                id: "S600",
                 title: "Powerblend® Crewneck Sweatshirt",
                 brand: "Champion",
                 label: "Performance Standard",
@@ -280,30 +280,30 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 2.5
             },
             {
-                id: "burnside-8600",
-                title: "Dusk to Dawn 1/4 Zip",
-                brand: "Burnside",
+                id: "ST860",
+                title: "Smooth Fleece 1/4-Zip",
+                brand: "Sport-Tek",
                 label: "Performance Layer",
-                blurb: "Tech performance meets casual style. 100% Poly with a textured look.",
-                description: "The Burnside Dusk to Dawn is a versatile quarter-zip pullover. 100% polyester fleece with a convertible collar and raglan sleeves. Great for corporate or active wear.",
+                blurb: "Tech performance meets casual style. 100% Poly with a sleek look.",
+                description: "The Sport-Tek ST860 is a versatile quarter-zip pullover. 100% polyester fleece construction designed for active or corporate wear.",
                 image: "/assets/products/burnside-8600-model.png",
                 tags: ["Performance", "Unisex", "Quarter-Zip"],
                 tier: "core",
                 msrp: "$44.00",
-                availableColors: ["Black", "Navy", "Charcoal", "Heather Grey"],
+                availableColors: ["Black", "True Navy", "Charcoal", "Heather Grey"],
                 sortOrder: 3
             },
             {
-                id: "nl-9602",
-                title: "Beach Fleece Full-Zip",
-                brand: "Next Level Apparel",
-                label: "Premium Soft",
-                blurb: "Ultra-soft beach fleece. 80/20 Cotton/Poly for a relaxed premium feel.",
-                description: "Next Level's Beach Fleece is incredibly soft and comfortable. This full-zip hoodie features a jersey-lined hood and a relaxed fit perfect for lifestyle brands.",
+                id: "PC78ZH",
+                title: "Core Fleece Full-Zip",
+                brand: "Port & Company",
+                label: "Core Full-Zip",
+                blurb: "Reliable fleece full-zip. 50/50 Cotton/Poly.",
+                description: "Port & Company Core Fleece is incredibly comfortable. This full-zip hoodie features a dyed-to-match drawcord and metallic zipper.",
                 image: "/assets/products/nl-9602-model.png",
-                tags: ["Premium", "Unisex", "Full-Zip"],
-                tier: "premium",
-                msrp: "$48.00",
+                tags: ["Core", "Unisex", "Full-Zip"],
+                tier: "core",
+                msrp: "$30.00",
                 availableColors: ["Black", "Navy", "Heather Grey", "Charcoal"],
                 sortOrder: 3.5
             }
@@ -313,7 +313,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "Long Sleeves",
         items: [
             {
-                id: "gildan-5400",
+                id: "5400",
                 title: "Heavy Cotton™ Long Sleeve",
                 brand: "Gildan",
                 label: "Value Standard",
@@ -327,7 +327,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1
             },
             {
-                id: "gildan-2400",
+                id: "2400",
                 title: "Ultra Cotton® Long Sleeve",
                 brand: "Gildan",
                 label: "Value Heavyweight",
@@ -341,7 +341,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1.5
             },
             {
-                id: "nl-3601",
+                id: "NL3601",
                 title: "Premium Cotton Long Sleeve",
                 brand: "Next Level Apparel",
                 label: "Core Softspun",
@@ -361,7 +361,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "Headwear",
         items: [
             {
-                id: "richardson-112",
+                id: "112",
                 title: "Richardson 112 Trucker",
                 brand: "Richardson",
                 label: "The Standard",
@@ -383,7 +383,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1
             },
             {
-                id: "yupoong-6006",
+                id: "6006",
                 title: "Classic 5-Panel Trucker",
                 brand: "Yupoong",
                 label: "Streetwear Classic",
@@ -404,7 +404,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1.2
             },
             {
-                id: "caps-dad",
+                id: "CP86",
                 title: "Garment Washed Dad Cap",
                 brand: "Port & Company",
                 label: "Core Casual",
@@ -427,7 +427,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 2
             },
             {
-                id: "caps-performance",
+                id: "STC32",
                 title: "Perforated Performance Cap",
                 brand: "Sport-Tek",
                 label: "Core Sport",
@@ -441,7 +441,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 13
             },
             {
-                id: "beanies-knit",
+                id: "SP12",
                 title: "Knit Beanie",
                 brand: "Sportsman",
                 label: "Core Warmth",
@@ -463,7 +463,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 4
             },
             {
-                id: "bucket-hats",
+                id: "BX003",
                 title: "Bio-Washed Bucket Hat",
                 brand: "Big Accessories",
                 label: "Core Street",
@@ -488,7 +488,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "Outerwear",
         items: [
             {
-                id: "port-j317",
+                id: "J317",
                 title: "Core Soft Shell Jacket",
                 brand: "Port Authority",
                 label: "Core Standard",
@@ -502,7 +502,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 1
             },
             {
-                id: "eb-fleece",
+                id: "EB200",
                 title: "Full-Zip Fleece Jacket",
                 brand: "Eddie Bauer",
                 label: "Premium Outdoor",
@@ -512,16 +512,11 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Premium", "Fleece", "Warm"],
                 tier: "premium",
                 msrp: "$80.00",
-                colorImages: {
-                    "Black": "/assets/products/eddie-bauer-eb200-black-model.png",
-                    "Navy": "/assets/products/eddie-bauer-eb200-navy-model.png",
-                    "Charcoal": "/assets/products/eddie-bauer-eb200-grey-model.png"
-                },
                 availableColors: ["Black", "Navy", "Charcoal", "Grey"],
                 sortOrder: 12
             },
             {
-                id: "tnf-dryvent",
+                id: "NF0A3JRN",
                 title: "DryVent™ Rain Jacket",
                 brand: "The North Face",
                 label: "Premium Technical",
@@ -531,15 +526,11 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Premium", "Waterproof", "Technical"],
                 tier: "premium",
                 msrp: "$150.00",
-                colorImages: {
-                    "Black": "/assets/products/northface-dryvent-model.png",
-                    "Navy": "/assets/products/northface-dryvent-model.png"
-                },
                 availableColors: ["Black", "Navy", "Grey"],
                 sortOrder: 23
             },
             {
-                id: "nea-601",
+                id: "NEA601",
                 title: "Coach's Jacket",
                 brand: "Sanmar",
                 label: "Core Street",
@@ -559,7 +550,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 4
             },
             {
-                id: "puffer-jacket",
+                id: "J7900",
                 title: "Packable Puffer Jacket",
                 brand: "Port Authority",
                 label: "Premium Warmth",
@@ -579,7 +570,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 5
             },
             {
-                id: "fleece-vest",
+                id: "F226",
                 title: "Microfleece Vest",
                 brand: "Port Authority",
                 label: "Core Layer",
@@ -603,7 +594,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "Bags",
         items: [
             {
-                id: "port-duffle",
+                id: "BG800",
                 title: "Value Duffle Bag",
                 brand: "Port Authority",
                 label: "Value Standard",
@@ -613,17 +604,11 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Value", "Durable", "Travel"],
                 tier: "value",
                 msrp: "$26.00",
-                colorImages: {
-                    "Black": "https://www.sanmar.com/medias/sys_master/images/images/h69/h10/8935043833886/6219_Black-1-BG800blackfront-624Wx724H.jpg",
-                    "Red": "https://www.sanmar.com/medias/sys_master/images/images/h25/hba/8935044259870/6219_Red-1-BG800redfront-624Wx724H.jpg",
-                    "Royal": "https://www.sanmar.com/medias/sys_master/images/images/h29/h8f/8935044653086/6219_TrueRoyal-1-BG800trueroyalfront-624Wx724H.jpg",
-                    "Navy": "https://www.sanmar.com/medias/sys_master/images/images/h92/hba/8935044554782/6219_TrueNavy-1-BG800truenavyfront-624Wx724H.jpg"
-                },
                 availableColors: ["Black", "Red", "Royal", "Navy"],
                 sortOrder: 1
             },
             {
-                id: "ogio-metro",
+                id: "711105",
                 title: "Metro Pack",
                 brand: "OGIO",
                 label: "Premium Tech",
@@ -633,15 +618,11 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Premium", "Laptop", "Tech"],
                 tier: "premium",
                 msrp: "$85.00",
-                colorImages: {
-                    "Black": "https://cdnp.sanmar.com/medias/sys_master/images/hde/h2b/15706903281694/624Wx724H_1642_Black-0-711105BlackBagFront2/624Wx724H-1642-Black-0-711105BlackBagFront2.jpg",
-                    "Charcoal": "https://cdnp.sanmar.com/medias/sys_master/images/hb0/he4/15706903674910/624Wx724H_1642_Noise-0-711105NoiseBagFront/624Wx724H-1642-Noise-0-711105NoiseBagFront.jpg"
-                },
                 availableColors: ["Black", "Charcoal"],
                 sortOrder: 2
             },
             {
-                id: "tote-canvas",
+                id: "B118",
                 title: "Heavy Canvas Tote",
                 brand: "Port Authority",
                 label: "Core Promo",
@@ -651,18 +632,11 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Core", "Promo", "Screen Print"],
                 tier: "core",
                 msrp: "$12.50",
-                colorImages: {
-                    "Black": "https://cdnp.sanmar.com/medias/sys_master/images/h42/h52/30951945445406/624Wx724H_2177_Black-0-B118BlackBagFront2/624Wx724H-2177-Black-0-B118BlackBagFront2.jpg",
-                    "Navy": "https://cdnp.sanmar.com/medias/sys_master/images/h0e/h50/30951946821662/624Wx724H_2177_Navy-0-B118NavyBagFront2/624Wx724H-2177-Navy-0-B118NavyBagFront2.jpg",
-                    "Red": "https://cdnp.sanmar.com/medias/sys_master/images/hc3/h31/30951947673630/624Wx724H_2177_Red-0-B118RedBagFront2/624Wx724H-2177-Red-0-B118RedBagFront2.jpg",
-                    "Royal": "https://cdnp.sanmar.com/medias/sys_master/images/h7a/hd6/30951947804702/624Wx724H_2177_Royal-0-B118RoyalBagFront2/624Wx724H-2177-Royal-0-B118RoyalBagFront2.jpg",
-                    "Forest": "https://cdnp.sanmar.com/medias/sys_master/images/h00/h8f/30951945281566/624Wx724H_2177_ForestGreen-0-B118ForestGreenBagFront2/624Wx724H-2177-ForestGreen-0-B118ForestGreenBagFront2.jpg"
-                },
                 availableColors: ["Black", "Navy", "Red", "Royal", "Forest"],
                 sortOrder: 3
             },
             {
-                id: "blanket-fleece",
+                id: "BP10",
                 title: "Fleece Stadium Blanket",
                 brand: "Port Authority",
                 label: "Core Event",
@@ -671,14 +645,6 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 image: "/assets/products/fleece-blanket.png",
                 tags: ["Core", "Events", "Embroidery"],
                 tier: "core",
-                colorImages: {
-                    "Black": "https://cdnp.sanmar.com/medias/sys_master/images/h8a/h56/30952114659358/624Wx724H_1991_Black-0-BP10BlackBlanketFlat/624Wx724H-1991-Black-0-BP10BlackBlanketFlat.jpg",
-                    "Navy": "https://cdnp.sanmar.com/medias/sys_master/images/hcd/h53/30952115511326/624Wx724H_1991_Navy-0-BP10NavyBlanketFlat/624Wx724H-1991-Navy-0-BP10NavyBlanketFlat.jpg",
-                    "Red": "https://cdnp.sanmar.com/medias/sys_master/images/h9f/h30/30952116035614/624Wx724H_1991_Red-0-BP10RedBlanketFlat/624Wx724H-1991-Red-0-BP10RedBlanketFlat.jpg",
-                    "Royal": "https://cdnp.sanmar.com/medias/sys_master/images/h66/h2f/30952116166686/624Wx724H_1991_Royal-0-BP10RoyalBlanketFlat/624Wx724H-1991-Royal-0-BP10RoyalBlanketFlat.jpg",
-                    "Forest": "https://cdnp.sanmar.com/medias/sys_master/images/hcf/h31/30952114954270/624Wx724H_1991_ForestGreen-0-BP10ForestGreenBlanketFlat/624Wx724H-1991-ForestGreen-0-BP10ForestGreenBlanketFlat.jpg",
-                    "Charcoal": "https://cdnp.sanmar.com/medias/sys_master/images/h03/h54/30952114528286/624Wx724H_1991-Charcoal-0-BP10CharcoalBlanketFlat/624Wx724H-1991-Charcoal-0-BP10CharcoalBlanketFlat.jpg"
-                },
                 availableColors: ["Black", "Navy", "Red", "Royal", "Forest", "Charcoal"],
                 msrp: "$32.00",
                 sortOrder: 4
@@ -689,7 +655,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         group: "Polos",
         items: [
             {
-                id: "port-k500",
+                id: "K500",
                 title: "Silk Touch™ Polo",
                 brand: "Port Authority",
                 label: "Value Uniform",
@@ -699,17 +665,6 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Value", "Unisex", "Embroidery"],
                 tier: "value",
                 msrp: "$24.00",
-                colorImages: {
-                    'White': '/assets/products/port-k500-silktouch-model.png',
-                    'Black': '/assets/products/port-k500-silktouch-model.png',
-                    'Navy': '/assets/products/port-k500-silktouch-model.png',
-                    'Royal': '/assets/products/port-k500-silktouch-model.png',
-                    'Red': '/assets/products/port-k500-silktouch-model.png',
-                    'Charcoal': '/assets/products/port-k500-silktouch-model.png',
-                    'Forest Green': '/assets/products/port-k500-silktouch-model.png',
-                    'Burgundy': '/assets/products/port-k500-silktouch-model.png',
-                    'Dark Green': '/assets/products/port-k500-silktouch-model.png'
-                },
                 availableColors: ['White', 'Black', 'Navy', 'Royal', 'Red', 'Charcoal', 'Forest Green', 'Burgundy', 'Dark Green'],
                 decorationMethods: ['Embroidery', 'Heat Transfer', 'Screen Print'],
                 sizesAvailable: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
@@ -766,7 +721,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 sortOrder: 3
             },
             {
-                id: "shirt-oxford",
+                id: "S658",
                 title: "SuperPro™ Oxford",
                 brand: "Port Authority",
                 label: "Core Office",
@@ -776,17 +731,11 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Core", "Unisex", "Office"],
                 tier: "core",
                 msrp: "$36.00",
-                colorImages: {
-                    "White": "/assets/products/s658-placeholder.png",
-                    "Black": "/assets/products/s658-placeholder.png",
-                    "Navy": "/assets/products/s658-placeholder.png",
-                    "Royal": "/assets/products/s658-placeholder.png"
-                },
                 availableColors: ["White", "Black", "Navy", "Royal"],
                 sortOrder: 4
             },
             {
-                id: "shirt-work",
+                id: "SP14",
                 title: "Industrial Work Shirt",
                 brand: "Red Kap",
                 label: "Core Industrial",
@@ -796,13 +745,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
                 tags: ["Core", "Industrial", "Durable"],
                 tier: "core",
                 msrp: "$32.00",
-                colorImages: {
-                    "Black": "/assets/products/sp14-placeholder.png",
-                    "Navy": "/assets/products/sp14-placeholder.png",
-                    "Charcoal": "/assets/products/sp14-placeholder.png",
-                    "Grey": "/assets/products/sp14-placeholder.png"
-                },
-                availableColors: ["Black", "Navy", "Charcoal", "Grey"],
+                availableColors: ["Black", "Charcoal", "Navy", "Light Blue"],
                 sortOrder: 5
             }
         ]

@@ -6,16 +6,24 @@ import { Container } from "./ui/container";
 import { SectionHeading } from "./ui/section-heading";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { quoteSchema, type QuoteFormData } from "@/lib/schemas";
 
 export function QuoteForm() {
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-        setStatus("loading");
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isSubmitting },
+        reset
+    } = useForm<QuoteFormData>({
+        resolver: zodResolver(quoteSchema)
+    });
 
-        const formData = new FormData(e.currentTarget);
-        const data = Object.fromEntries(formData);
+    async function onSubmit(data: QuoteFormData) {
+        setStatus("loading");
 
         try {
             const response = await fetch("/api/quote", {
@@ -27,7 +35,7 @@ export function QuoteForm() {
             if (!response.ok) throw new Error("Failed to submit");
 
             setStatus("success");
-            (e.target as HTMLFormElement).reset();
+            reset();
         } catch (error) {
             setStatus("error");
         }
@@ -50,28 +58,38 @@ export function QuoteForm() {
                     ) : (
                         <form
                             className="grid grid-cols-1 gap-4 md:grid-cols-2"
-                            onSubmit={handleSubmit}
+                            onSubmit={handleSubmit(onSubmit)}
                         >
+                            {/* Honeypot field - visually hidden to catch bots */}
+                            <div className="hidden" aria-hidden="true">
+                                <label htmlFor="company_website">Company Website</label>
+                                <input id="company_website" type="text" {...register("company_website")} tabIndex={-1} autoComplete="off" />
+                            </div>
+
                             <div>
                                 <label htmlFor="name" className="mb-1 block text-sm text-white/90">Name</label>
-                                <input id="name" name="name" required className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal uppercase tracking-wide text-sm font-medium" placeholder="Your name" />
+                                <input id="name" {...register("name")} className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal uppercase tracking-wide text-sm font-medium" placeholder="Your name" />
+                                {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
                             </div>
                             <div>
                                 <label htmlFor="email" className="mb-1 block text-sm text-white/90">Email</label>
-                                <input id="email" name="email" type="email" required className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal uppercase tracking-wide text-sm font-medium" placeholder="you@company.com" />
+                                <input id="email" type="email" {...register("email")} className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal uppercase tracking-wide text-sm font-medium" placeholder="you@company.com" />
+                                {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>}
                             </div>
                             <div className="md:col-span-2">
                                 <label htmlFor="artworkUrl" className="mb-1 block text-sm text-white/90">Link to optional artwork (Drive, Dropbox, etc.)</label>
-                                <input id="artworkUrl" name="artworkUrl" type="url" className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm font-medium" placeholder="https://..." />
+                                <input id="artworkUrl" type="url" {...register("artworkUrl")} className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm font-medium" placeholder="https://..." />
+                                {errors.artworkUrl && <p className="text-red-400 text-xs mt-1">{errors.artworkUrl.message}</p>}
                             </div>
                             <div className="md:col-span-2">
                                 <label htmlFor="details" className="mb-1 block text-sm text-white/90">Project details</label>
-                                <textarea id="details" name="details" rows={4} className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm font-medium" placeholder="What are we making? Quantities, sizes, date needed, shipping address…" />
+                                <textarea id="details" rows={4} {...register("details")} className="w-full rounded-none border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/50 outline-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm font-medium" placeholder="What are we making? Quantities, sizes, date needed, shipping address…" />
+                                {errors.details && <p className="text-red-400 text-xs mt-1">{errors.details.message}</p>}
                             </div>
                             <div className="md:col-span-2 flex items-center justify-between">
                                 <div className="text-xs text-white/60">No spam. We reply same‑day.</div>
-                                <Button type="submit" className="bg-brand-teal text-white hover:bg-[#156666] font-display uppercase tracking-widest rounded-none" disabled={status === "loading"}>
-                                    {status === "loading" ? "Transmitting..." : "Send request"}
+                                <Button type="submit" className="bg-brand-teal text-white hover:bg-[#156666] font-display uppercase tracking-widest rounded-none" disabled={isSubmitting}>
+                                    {isSubmitting ? "Transmitting..." : "Send request"}
                                 </Button>
                             </div>
                             {status === "error" && (

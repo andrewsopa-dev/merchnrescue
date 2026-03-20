@@ -1,15 +1,58 @@
 import React from "react";
-import { PRODUCT_CATALOG } from "@/lib/catalog";
+import { Metadata } from "next";
+import prisma from "@/lib/db";
 import { ProductCard } from "@/components/product-card";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-export default function ProductsPage() {
+export const metadata: Metadata = {
+    title: "Premium Catalog & Blanks",
+    description: "Curated premium blanks and goods for your custom merch. We source high-quality apparel built for durability and style.",
+};
+
+export default async function ProductsPage() {
+    // Fetch directly from SQLite via Prisma
+    const categories = await prisma.category.findMany({
+        include: {
+            products: {
+                include: { colors: true },
+                orderBy: { sortOrder: 'asc' }
+            }
+        },
+        orderBy: { sortOrder: 'asc' }
+    });
+
+    // Map Prisma models to the ProductCard prop interface
+    const PRODUCT_CATALOG = categories.map(cat => ({
+        group: cat.name,
+        items: cat.products.map(p => {
+            const availableColors = p.colors.map(c => c.name);
+            const colorImages: Record<string, string> = {};
+            p.colors.forEach(c => {
+                if (c.imageUrl) colorImages[c.name] = c.imageUrl;
+            });
+            return {
+                id: p.id,
+                title: p.title,
+                brand: p.brand,
+                tier: p.tier as "premium" | "core" | "value",
+                label: p.label,
+                blurb: p.blurb,
+                description: p.description || undefined,
+                msrp: p.msrp || undefined,
+                image: p.image || "",
+                imageScale: p.imageScale || undefined,
+                tags: [p.brand], // Database tags can be expanded in Phase 3
+                availableColors,
+                colorImages
+            };
+        })
+    }));
+
     return (
         <div className="min-h-screen bg-brand-black text-white">
-            {/* Background camo-ish texture */}
             <div
                 className="pointer-events-none fixed inset-0 -z-10 opacity-[0.05]"
                 style={{
@@ -26,6 +69,7 @@ export default function ProductsPage() {
                         kicker="Catalog"
                         title="Premium Blanks & Goods"
                         subtitle="Curated for quality and printability. If you don't see it, we can source it."
+                        as="h1"
                     />
 
                     <div className="space-y-16">

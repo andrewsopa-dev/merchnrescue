@@ -5,6 +5,7 @@ export const quoteSchema = z.object({
     email: z.string().email("Invalid email address"),
     details: z.string().min(5, "Please share some details"),
     artworkUrl: z.string().url("Please enter a valid URL").optional().or(z.literal("")),
+    company_website: z.string().max(0, "Invalid submission").optional().or(z.literal("")), // Honeypot
 });
 
 export type QuoteFormData = z.infer<typeof quoteSchema>;

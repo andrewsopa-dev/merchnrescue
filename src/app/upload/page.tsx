@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { Container } from "@/components/ui/container";
+
+export const metadata: Metadata = {
+    title: "Upload Artwork",
+    description: "Send us your files securely. Review our preflight checklist for optimal high-resolution print results.",
+};
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -22,6 +28,7 @@ export default function UploadPage() {
                     kicker="Production Ready"
                     title="Upload Artwork"
                     subtitle="Send us your files securely. Please review the preflight checklist below."
+                    as="h1"
                 />
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">

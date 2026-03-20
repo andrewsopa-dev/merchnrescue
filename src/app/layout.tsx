@@ -13,7 +13,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://merchnresue.com"), // Update this with actual production URL
+  metadataBase: new URL("https://merchnrescue.com"), // Update this with actual production URL
   title: {
     default: "Merch & Rescue — Full-Service Merch Production & Fulfillment",
     template: "%s | Merch & Rescue",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://merchnresue.com",
+    url: "https://merchnrescue.com",
     title: "Merch & Rescue — Full-Service Merch Production",
     description: "Battle-tested merch ops. Design, print, ship. We handle the logistics so you can focus on the mission.",
     siteName: "Merch & Rescue",
@@ -71,6 +71,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { CartDrawer } from "@/components/cart-drawer";
+import SessionProvider from "@/components/auth-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -78,7 +81,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${oswald.variable} font-sans`}>{children}</body>
+      <body className={`${inter.variable} ${oswald.variable} font-sans relative`}>
+        <SessionProvider>
+          {children}
+          <CartDrawer />
+        </SessionProvider>
+      </body>
     </html>
   );
 }

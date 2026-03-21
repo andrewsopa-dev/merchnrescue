@@ -1,8 +1,9 @@
 [build]
   command = "npm run build"
-  publish = ".next"
-
 
 [build.environment]
   DATABASE_URL = "file:./dev.db"
   AUTH_SECRET = "EgzY/7hkhN8yJLCA1dw2tNPDEamuBUv05/+4dX7NLgU="
+  NODE_VERSION = "20"
+  CI = "false"
+
